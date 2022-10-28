@@ -1,0 +1,101 @@
+.Header {
+    background-color: var(--white-dark);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgLogo {
+    margin-top: -115px;
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.imgLogoMobile {
+    display: none;
+}
+
+.HowText {
+    margin-bottom: 28px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-gray);
+    line-height: 22px;
+}
+
+.SearchText {
+    font-size: 48px;
+    color: var(--green);
+    font-weight: 900;
+    text-align: center;
+    max-width: 550px;
+    height: 118px;
+    margin-bottom: 30px;
+    line-height: 59px;
+}
+
+.ButtonStart {
+    width: 280px;
+    height: 60px;
+    border: 3px solid var(--yellow);
+    border-radius: 30px;
+    background-color: var(--yellow);
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 700;
+    color: var(--green);
+}
+
+/* @media screen and (min-width: 601px) {
+    .imgLogoMobile {
+        display: none;
+    }
+} */
+
+@media screen and (max-width: 600px) {
+    .Header {
+        background-color: var(--white-dark);
+        height: 360px;
+    }
+
+    .imgLogo {
+        display: none;
+    }
+
+    .imgLogoMobile {
+        display: flex !important;
+        margin-top: -160px;
+        margin-bottom: 40px;
+    }
+
+    .SearchText {
+        font-size: 24px;
+        color: var(--green);
+        font-weight: 900;
+        text-align: center;
+        max-width: 250px;
+        height: 118px;
+        margin-bottom: 0px;
+        line-height: 29px;
+    }
+
+    .ButtonStart {
+        width: 264px;
+        height:58px;
+        border: 3px solid var(--yellow);
+        border-radius: 30px;
+        background-color: var(--yellow);
+        font-size: 18px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-weight: 700;
+        color: var(--green);
+        margin-bottom: -45px;
+    }
+}
