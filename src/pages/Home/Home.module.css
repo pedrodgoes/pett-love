@@ -1,5 +1,53 @@
 .Content {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+}
+
+.Dashed {
+    margin: 0 auto;
+}
+
+.DashedTransform {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.DashedMin {
+    display: none;
+}
+
+.DashedMinTransform {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .Dashed {
+        display: none;
+    }
+
+    .DashedTransform {
+        display: none;
+    }
+
+    .DashedMin {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: -40px;
+        margin-top: 90px;
+    }
+
+    .DashedMinTransform {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: -40px;
+        margin-top: 90px;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
 }

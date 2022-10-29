@@ -8,6 +8,8 @@ import ThirdImage from "../../assets/thirdImage.svg";
 import Paw from "../../assets/paw.svg";
 import Sear from "../../assets/sear.svg";
 import Agende from "../../assets/agende.svg";
+import Dashed from "../../assets/dashed.svg";
+import DashedMin from "../../assets/dashed-min.svg";
 
 function App() {
   const stepOneTitle = "Cadastre seu";
@@ -27,6 +29,14 @@ function App() {
           icon={Paw}
         />
 
+        <div className={styles.Dashed}>
+          <img src={Dashed} alt="dashed" />
+        </div>
+
+        <div className={styles.DashedMin}>
+          <img src={DashedMin} alt="dashed" />
+        </div>
+
         <StepInstruction
           title={stepOneTitle}
           emphasisis={stepOneTitleEmphasis}
@@ -34,6 +44,14 @@ function App() {
           image={SecondImage}
           icon={Sear}
         />
+
+        <div className={styles.DashedTransform}>
+          <img src={Dashed} alt="dashed" />
+        </div>
+
+        <div className={styles.DashedMinTransform}>
+          <img src={DashedMin} alt="dashed" />
+        </div>
 
         <StepInstruction
           title={stepOneTitle}
