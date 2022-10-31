@@ -10,6 +10,7 @@ import Sear from "../../assets/sear.svg";
 import Agende from "../../assets/agende.svg";
 import Dashed from "../../assets/dashed.svg";
 import DashedMin from "../../assets/dashed-min.svg";
+import Footer from "../components/Footer";
 
 function App() {
   const stepOneTitle = "Cadastre seu";
@@ -60,6 +61,8 @@ function App() {
           image={ThirdImage}
           icon={Agende}
         />
+
+        <Footer />
       </div>
     </div>
   );

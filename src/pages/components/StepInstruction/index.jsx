@@ -4,14 +4,14 @@ function StepInstruction({ title, emphasisis, orderHorizontal, image, icon }) {
   return (
     <div
       className={styles.StepInstruction}
-      //   style={
-      //     orderHorizontal === true
-      //       ? { flexDirection: "row" }
-      //       : { flexDirection: "row-reverse" }
-      //   }
+      // style={
+      //   orderHorizontal === true
+      //     ? { flexDirection: "row" }
+      //     : { flexDirection: "row-reverse" }
+      // }
     >
       <div className={styles.Image}>
-        <img src={image} alt="logo" width="350px" height="260px" />
+        <img src={image} alt="logo" width="280px" height="220px" />
       </div>
 
       <div className={styles.Description}>

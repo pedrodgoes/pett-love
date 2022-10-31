@@ -1,0 +1,287 @@
+.Footer {
+    background-color: var(--green-dark);
+    color: var(--white);
+    margin-top: 250px;
+    width: 100%;
+}
+
+.Body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 90px 80px 0 80px;
+    gap: 20%;
+}
+
+.About {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+    width: 800px;
+    gap: 150px;
+}
+
+.Info {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+
+.Policy {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    white-space: nowrap;
+}
+.AboutText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 15px;
+}
+
+#Help {
+    color: var(--yellow);
+}
+
+#Bank {
+    display: flex;
+    width: 280px;
+    flex-direction: row;
+    gap: 5px;
+    font-weight: 500;
+    white-space: normal;
+    display: block;
+}
+
+#Bank span {
+    font-weight: 800;
+}
+
+#Bullet {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--white);
+    margin: 5px 1px;
+}
+
+#ArrowUp {
+    font-size: 30px;
+}
+
+.Contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: -70px;
+}
+
+.ContainerInput {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 700;
+    gap: 10px;
+}
+
+.InputContact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.InputContact input {
+    border: 3px solid var(--white);
+    border-radius: 30px;
+    border: none;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--white);
+    color: var(--green);
+    padding: 20px;
+}
+
+.InputContact input:focus {
+    outline: none;
+}
+
+.InputContact button {
+    border: 3px solid var(--yellow);
+    border-radius: 30px;
+    height: 30px;
+    background-color: var(--yellow);
+    color: var(--white);
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 190px;
+    padding: 4px;
+}
+
+.IconsFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ContainerIconFooter {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--green);
+    margin: 5px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 90px;
+    background-color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    gap: 23%;
+    margin-top: 15px;
+}
+
+.Bottom text {
+    display: flex;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .About {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: left;
+        width: 600px;
+        gap: 50px;
+    }
+
+    .Info {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .Footer {
+        margin-top: 100px;
+    }
+    .About {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: left;
+        width: 500px;
+        gap: 25px;
+    }
+
+    .Info {
+        width: 50%;
+    }
+
+    .ContainerInput {
+        display: flex;
+        align-items: center;
+    }
+
+    .Contacts {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .Footer {
+        margin-top: 100px;
+    }
+
+    .About {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: left;
+        width: 400px;
+        gap: 10px;
+    }
+
+    .Info {
+        display: none;
+    }
+
+    .InputContact input {
+        padding: 10px;
+        border: 3px solid var(--white);
+        border-radius: 30px;
+        border: none;
+        height: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: var(--white);
+        color: var(--green);
+    }
+
+    .InputContact button {
+        border: 3px solid var(--yellow);
+        border-radius: 30px;
+        height: 30px;
+        background-color: var(--yellow);
+        color: var(--white);
+        position: absolute;
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 130px;
+        padding: 4px;
+    }
+
+    .ContainerInput {
+        display: flex;
+        align-items: center;
+    }
+
+    .Contacts {
+        gap: 20px;
+    }
+
+    .Bottom {
+        padding:  0 20px;
+        gap: 10%;
+    }
+    .Bottom  text{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Bottom {
+        flex-direction: column;
+        padding: 80px 0;
+        gap: 25px;
+        background-color: var(--green-dark)
+    }
+
+    #ArrowUp {
+        background-color: var(--green);
+        width: 100%;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
