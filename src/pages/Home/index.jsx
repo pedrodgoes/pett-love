@@ -12,12 +12,12 @@ import Dashed from "../../assets/dashed.svg";
 import DashedMin from "../../assets/dashed-min.svg";
 import Footer from "../../components/Footer";
 
-function App() {
+function Home() {
   const stepOneTitle = "Cadastre seu";
   const stepOneTitleEmphasis = "animal";
   const isOrderHorizontal = true;
   return (
-    <div className="App">
+    <div className="Home">
       <TopHeader />
       <Header />
 
@@ -68,4 +68,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
