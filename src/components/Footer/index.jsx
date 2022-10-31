@@ -1,12 +1,12 @@
 import styles from "./Footer.module.css";
-import logoText from "../../../assets/logo-text.svg";
-import facebook from "../../../assets/facebook.svg";
-import instagram from "../../../assets/instagram.svg";
-import youtube from "../../../assets/youtube.svg";
-import clickweb from "../../../assets/clickweb.svg";
+import logoText from "../../assets/logo-text.svg";
+import facebook from "../../assets/facebook.svg";
+import instagram from "../../assets/instagram.svg";
+import youtube from "../../assets/youtube.svg";
+import clickweb from "../../assets/clickweb.svg";
 import { IoIosArrowDown } from "react-icons/io";
 import { SlArrowUp } from "react-icons/sl";
-import useWindowDimensions from "../../../hooks/useWindowDimensions";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 function Footer() {
   const { width } = useWindowDimensions();
@@ -83,17 +83,17 @@ function Footer() {
         </text>
         {width > 600 ? (
           <>
-            <div id={styles.ArrowUp}>
+            <a id={styles.ArrowUp} href="#top">
               <SlArrowUp />
-            </div>
+            </a>
             <img src={clickweb} alt="logo" />
           </>
         ) : (
           <>
             <img src={clickweb} alt="logo" />
-            <div id={styles.ArrowUp}>
+            <a id={styles.ArrowUp} href="#top">
               <SlArrowUp />
-            </div>
+            </a>
           </>
         )}
       </div>

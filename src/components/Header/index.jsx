@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
-import logo from "../../../assets/logo.svg";
-import logoMoile from "../../../assets/logo-mobile.svg";
-import useWindowDimensions from "../../../hooks/useWindowDimensions";
+import logo from "../../assets/logo.svg";
+import logoMoile from "../../assets/logo-mobile.svg";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 function Header() {
   const { width } = useWindowDimensions();

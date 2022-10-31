@@ -1,5 +1,5 @@
 import styles from "./StepInstruction.module.css";
-import useWindowDimensions from "../../../hooks/useWindowDimensions";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 function StepInstruction({ title, emphasisis, orderHorizontal, image, icon }) {
   const { width } = useWindowDimensions();
