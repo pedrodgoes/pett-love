@@ -1,14 +1,21 @@
 import styles from "./StepInstruction.module.css";
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 function StepInstruction({ title, emphasisis, orderHorizontal, image, icon }) {
+  const { width } = useWindowDimensions();
+
   return (
     <div
       className={styles.StepInstruction}
-      // style={
-      //   orderHorizontal === true
-      //     ? { flexDirection: "row" }
-      //     : { flexDirection: "row-reverse" }
-      // }
+      style={
+        width < 850
+          ? orderHorizontal === true
+            ? { flexDirection: "column" }
+            : { flexDirection: "column" }
+          : orderHorizontal === true
+          ? { flexDirection: "row" }
+          : { flexDirection: "row-reverse" }
+      }
     >
       <div className={styles.Image}>
         <img src={image} alt="logo" width="280px" height="220px" />
