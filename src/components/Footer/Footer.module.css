@@ -48,13 +48,13 @@
     gap: 15px;
 }
 
-#Help {
+.Help {
     color: var(--yellow);
 }
 
-#Bank {
+.Bank {
     display: flex;
-    width: 280px;
+    width: 325px;
     flex-direction: row;
     gap: 5px;
     font-weight: 500;
@@ -62,11 +62,11 @@
     display: block;
 }
 
-#Bank span {
+.Bank span {
     font-weight: 800;
 }
 
-#Bullet {
+.Bullet {
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -184,6 +184,10 @@
     .Info {
         width: 70%;
     }
+
+    .Bank {
+        width: 220px;
+    }
 }
 
 @media screen and (max-width: 1150px) {
@@ -300,5 +304,18 @@
         align-items: center;
         justify-content: center;
         color: var(--white);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Bottom {
+        gap: 20px;
+    }
+    .Bottom p{
+        width: 175px;
+        text-align: center;
+    }
+    .Bottom p span{
+       display: none;
     }
 }

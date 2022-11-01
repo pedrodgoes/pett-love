@@ -19,6 +19,13 @@ function Footer() {
     });
   };
 
+  // função para copiar o valor do pix no clipboard do rodapé
+  const CopyClipboardPix = (pix) => {
+    copy(pix);
+
+    return value;
+  };
+
   return (
     <div className={styles.Footer}>
       <div className={styles.Body}>
@@ -40,17 +47,17 @@ function Footer() {
             </div>
 
             <div className={styles.AboutText}>
-              <p id={styles.Help}>Ajude uma entidade</p>
+              <p className={styles.Help}>Ajude uma entidade</p>
               <div>
-                <p id={styles.Bank}>
+                <p className={styles.Bank}>
                   SOS Vida Animal <IoIosArrowDown />
                 </p>
-                <p id={styles.Bank}>
+                <p className={styles.Bank}>
                   Banco Itaú: Ag <span>8804</span> Conta <span>01234-5</span>{" "}
                   PIX: <span>43.660.696/0001-95</span>{" "}
                   <button
                     className={styles.CopyButton}
-                    onClick={() => copy("A")}
+                    onClick={() => CopyClipboardPix("43.660.696/0001-95")}
                   >
                     <MdOutlineFileCopy />
                   </button>
@@ -62,11 +69,11 @@ function Footer() {
           </div>
           <div className={styles.Policy}>
             <p>Política de privacidade</p>
-            <div id={styles.Bullet} />
+            <div className={styles.Bullet} />
             <p>Termos de uso</p>
-            <div id={styles.Bullet} />
+            <div className={styles.Bullet} />
             <p>Política de Cookies</p>
-            <div id={styles.Bullet} />
+            <div className={styles.Bullet} />
             <p>Política de cancelamento</p>
           </div>
         </div>
@@ -92,7 +99,9 @@ function Footer() {
         </div>
       </div>
       <div className={styles.Bottom}>
-        <p>Pett Love - Relacionamento |CNPJ: 43.660.696/0001-95</p>
+        <p>
+          Pett Love - Relacionamento <span>|</span> CNPJ: 43.660.696/0001-95
+        </p>
         <a className={styles.ArrowUp} onClick={scrollToTop} href>
           <SlArrowUp />
         </a>
