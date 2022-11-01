@@ -14,8 +14,6 @@ import Footer from "../../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-// import Lottie from "lottie-react";
-// import PawLoading from "../../assets/paw.json";
 
 function Home() {
   const stepOneTitle = "Cadastre seu";
@@ -69,7 +67,6 @@ function Home() {
           icon={Agende}
         />
 
-        {/* <Lottie animationData={PawLoading} style={{ height: 100 }} /> */}
         <Footer />
       </div>
     </div>
