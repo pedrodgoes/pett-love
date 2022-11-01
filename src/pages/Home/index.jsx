@@ -1,6 +1,6 @@
-import Header from "../../components/Header";
+import Hero from "../../components/Hero";
 import StepInstruction from "../../components/StepInstruction";
-import TopHeader from "../../components/TopHeader";
+import Header from "../../components/Header";
 import styles from "./Home.module.css";
 import FirstImage from "../../assets/firstImage.svg";
 import SecondImage from "../../assets/secondImage.svg";
@@ -11,21 +11,29 @@ import Agende from "../../assets/agende.svg";
 import Dashed from "../../assets/dashed.svg";
 import DashedMin from "../../assets/dashed-min.svg";
 import Footer from "../../components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+// import Lottie from "lottie-react";
+// import PawLoading from "../../assets/paw.json";
 
 function Home() {
   const stepOneTitle = "Cadastre seu";
   const stepOneTitleEmphasis = "animal";
-  const isOrderHorizontal = true;
+
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <div className="Home">
-      <TopHeader />
       <Header />
+      <Hero />
 
       <div className={styles.Content}>
         <StepInstruction
           title={stepOneTitle}
           emphasisis={stepOneTitleEmphasis}
-          orderHorizontal={isOrderHorizontal}
+          orderHorizontal
           image={FirstImage}
           icon={Paw}
         />
@@ -41,7 +49,6 @@ function Home() {
         <StepInstruction
           title={stepOneTitle}
           emphasisis={stepOneTitleEmphasis}
-          orderHorizontal={!isOrderHorizontal}
           image={SecondImage}
           icon={Sear}
         />
@@ -57,11 +64,12 @@ function Home() {
         <StepInstruction
           title={stepOneTitle}
           emphasisis={stepOneTitleEmphasis}
-          orderHorizontal={isOrderHorizontal}
+          orderHorizontal
           image={ThirdImage}
           icon={Agende}
         />
 
+        {/* <Lottie animationData={PawLoading} style={{ height: 100 }} /> */}
         <Footer />
       </div>
     </div>

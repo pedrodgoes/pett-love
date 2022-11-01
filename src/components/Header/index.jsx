@@ -1,34 +1,30 @@
 import styles from "./Header.module.css";
+import { BiMenuAltLeft, BiUser } from "react-icons/bi";
+import useMediaQuery from "../../hooks/useMediaQuery";
 import logo from "../../assets/logo.svg";
-import logoMoile from "../../assets/logo-mobile.svg";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { useNavigate } from "react-router-dom";
+import logoMobile from "../../assets/logo-mobile.svg";
 
 function Header() {
-  const { width } = useWindowDimensions();
-  const navigate = useNavigate();
-
-  const nextPage = () => {
-    navigate("/list");
-  };
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
   return (
-    <div className={styles.Header}>
-      <div className={styles.imgLogo}>
-        <img src={logo} alt="logo" />
-      </div>
-      <div className={styles.imgLogoMobile}>
-        <img src={logoMoile} alt="logo" />
-      </div>
-      <div className={styles.HowText}>COMO FUNCIONA</div>
-      <div className={styles.SearchText}>
-        {width < 600
-          ? "Encontre um love para o seu animal sem sair de casa."
-          : "Encontre um pretendente para o seu animal"}
-      </div>
-      <button className={styles.ButtonStart} onClick={nextPage}>
+    <div className={styles.Header} id="top">
+      <button className={styles.ButtonMenu}>
         {" "}
-        Comece agora!{" "}
+        <BiMenuAltLeft /> <text>Menu</text>{" "}
+      </button>
+      {isMobile ? (
+        <div className={styles.imgLogoMobile}>
+          <img src={logoMobile} alt="logo" />
+        </div>
+      ) : (
+        <div className={styles.imgLogo}>
+          <img src={logo} alt="logo" />
+        </div>
+      )}
+      <button className={styles.ButtonLogin}>
+        {" "}
+        <BiUser /> <text>Entrar</text>{" "}
       </button>
     </div>
   );

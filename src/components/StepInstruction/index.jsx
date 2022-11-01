@@ -7,12 +7,13 @@ function StepInstruction({ title, emphasisis, orderHorizontal, image, icon }) {
   return (
     <div
       className={styles.StepInstruction}
+      data-aos="fade-up"
       style={
         width < 850
-          ? orderHorizontal === true
+          ? orderHorizontal
             ? { flexDirection: "column" }
             : { flexDirection: "column" }
-          : orderHorizontal === true
+          : orderHorizontal
           ? { flexDirection: "row" }
           : { flexDirection: "row-reverse" }
       }

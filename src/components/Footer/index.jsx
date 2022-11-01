@@ -6,10 +6,18 @@ import youtube from "../../assets/youtube.svg";
 import clickweb from "../../assets/clickweb.svg";
 import { IoIosArrowDown } from "react-icons/io";
 import { SlArrowUp } from "react-icons/sl";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { MdOutlineFileCopy } from "react-icons/md";
+import useCopyToClipboard from "../../hooks/useToClipBoard";
 
 function Footer() {
-  const { width } = useWindowDimensions();
+  // eslint-disable-next-line no-unused-vars
+  const [value, copy] = useCopyToClipboard();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className={styles.Footer}>
@@ -18,42 +26,48 @@ function Footer() {
           <img src={logoText} alt="logo" width="450px" height="112px" />
           <div className={styles.About}>
             <div className={styles.AboutText}>
-              <text>Sobre nós</text>
-              <text>Como funciona</text>
-              <text>Dúvidas frequentes</text>
-              <text>Blog</text>
+              <p>Sobre nós</p>
+              <p>Como funciona</p>
+              <p>Dúvidas frequentes</p>
+              <p>Blog</p>
             </div>
 
             <div className={styles.AboutText}>
-              <text>Pets namorando</text>
-              <text>Comece agora!</text>
-              <text>Contato</text>
-              <text />
+              <p>Pets namorando</p>
+              <p>Comece agora!</p>
+              <p>Contato</p>
+              <p />
             </div>
 
             <div className={styles.AboutText}>
-              <text id={styles.Help}>Ajude uma entidade</text>
+              <p id={styles.Help}>Ajude uma entidade</p>
               <div>
-                <text id={styles.Bank}>
+                <p id={styles.Bank}>
                   SOS Vida Animal <IoIosArrowDown />
-                </text>
-                <text id={styles.Bank}>
+                </p>
+                <p id={styles.Bank}>
                   Banco Itaú: Ag <span>8804</span> Conta <span>01234-5</span>{" "}
-                  PIX: <span>43.660.696/0001-95</span>
-                </text>
-                <text />
-                <text />
+                  PIX: <span>43.660.696/0001-95</span>{" "}
+                  <button
+                    className={styles.CopyButton}
+                    onClick={() => copy("A")}
+                  >
+                    <MdOutlineFileCopy />
+                  </button>
+                </p>
+                <p />
+                <p />
               </div>
             </div>
           </div>
           <div className={styles.Policy}>
-            <text>Política de privacidade</text>
+            <p>Política de privacidade</p>
             <div id={styles.Bullet} />
-            <text>Termos de uso</text>
+            <p>Termos de uso</p>
             <div id={styles.Bullet} />
-            <text>Política de Cookies</text>
+            <p>Política de Cookies</p>
             <div id={styles.Bullet} />
-            <text>Política de cancelamento</text>
+            <p>Política de cancelamento</p>
           </div>
         </div>
         <div className={styles.Contacts}>
@@ -78,24 +92,11 @@ function Footer() {
         </div>
       </div>
       <div className={styles.Bottom}>
-        <text>
-          Pett Love - Relacionamento | <p>CNPJ: 43.660.696/0001-95</p>
-        </text>
-        {width > 600 ? (
-          <>
-            <a id={styles.ArrowUp} href="#top">
-              <SlArrowUp />
-            </a>
-            <img src={clickweb} alt="logo" />
-          </>
-        ) : (
-          <>
-            <img src={clickweb} alt="logo" />
-            <a id={styles.ArrowUp} href="#top">
-              <SlArrowUp />
-            </a>
-          </>
-        )}
+        <p>Pett Love - Relacionamento |CNPJ: 43.660.696/0001-95</p>
+        <a className={styles.ArrowUp} onClick={scrollToTop} href>
+          <SlArrowUp />
+        </a>
+        <img src={clickweb} alt="logo" />
       </div>
     </div>
   );
