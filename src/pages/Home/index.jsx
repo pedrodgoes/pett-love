@@ -18,6 +18,10 @@ import { useEffect } from "react";
 function Home() {
   const stepOneTitle = "Cadastre seu";
   const stepOneTitleEmphasis = "animal";
+  const stepSecondTitle = "Procuro";
+  const stepSecondTitleEmphasis = "pretendentes";
+  const stepThirdTitle = "Marque um";
+  const stepThirdTitleEmphasis = "encontro";
 
   useEffect(() => {
     AOS.init({ duration: 1500 });
@@ -45,8 +49,8 @@ function Home() {
         </div>
 
         <StepInstruction
-          title={stepOneTitle}
-          emphasisis={stepOneTitleEmphasis}
+          title={stepSecondTitle}
+          emphasisis={stepSecondTitleEmphasis}
           image={SecondImage}
           icon={Sear}
         />
@@ -60,8 +64,8 @@ function Home() {
         </div>
 
         <StepInstruction
-          title={stepOneTitle}
-          emphasisis={stepOneTitleEmphasis}
+          title={stepThirdTitle}
+          emphasisis={stepThirdTitleEmphasis}
           orderHorizontal
           image={ThirdImage}
           icon={Agende}
