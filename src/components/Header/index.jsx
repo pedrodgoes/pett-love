@@ -4,11 +4,14 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import logo from "../../assets/logo.svg";
 import logoMobile from "../../assets/logo-mobile.svg";
 
-function Header() {
+function Header(pageList) {
   const isMobile = useMediaQuery("(max-width: 600px)");
 
   return (
-    <div className={styles.Header} id="top">
+    <div
+      className={styles.Header}
+      style={pageList ? { backgroundColor: "white" } : ""}
+    >
       <button className={styles.ButtonMenu}>
         {" "}
         <BiMenuAltLeft /> <text>Menu</text>{" "}
